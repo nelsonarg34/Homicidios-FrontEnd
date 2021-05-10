@@ -1,0 +1,135 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*color: white;*/
+    /*text-align: center;*/
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+div {
+    margin: 0;
+}
+
+.navbar {
+    display: block;
+    background-color: green;
+    height: 6rem;
+}
+
+.container {
+    padding: 0 1rem;
+    height: 100rem;
+    display: grid;
+    grid-template-columns: 20%;
+    grid-template-rows: 50%, 50%;
+    grid-template-areas: "uno tres tres" 
+                         "uno tres tres" 
+                         "dos tres tres";
+    /*border: 1px solid black;*/
+    grid-gap: 0.8rem;
+}
+
+.s1 {
+    background-color: red;
+    grid-area: uno;
+}
+
+.s2 {
+    background-color: orange;
+    grid-area: dos;
+}
+
+.s3 {
+    background-color: purple;
+    grid-area: tres;
+
+}
+
+@media screen and (max-width: 100rem) {
+    .container {
+        grid-template-areas: "dos tres tres" 
+                              "dos dos dos"
+                              "uno uno uno";
+    }
+}
+
+.footer {
+    display: block;
+    background-color: blue;
+    height: 6rem;
+    margin: 1rem;
+}
+
+.centrado{
+	margin:0 auto; 
+	padding: 0 1rem;
+}
+
+@media screen and (min-width: 52em){ 
+	.centrado{			
+		max-width: 100em;
+	}
+}
+
+.menu-section{
+	/*padding-bottom: 2em;*/
+	margin-bottom: 1rem;
+	border-bottom: 1px solid hsl(0, 0%);
+}
+
+.menu ul{
+	list-style-type: none; 
+	padding: 0;
+	margin:0;
+	background: hsl(0, 0%, 15%);
+}
+
+.menu li a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: .6em 1em; 
+}
+
+.menu li a:hover {
+	background: hsl(0, 0%, 25%);
+}
+ 
+
+ /*De aca para abajo Flexbox parte dos de la clase*/
+ .menu-simple ul{
+ 	display: flex;  /*este display nos premite trabajar con cajas flexibles*/
+ 			/*vemos como se ve igual que si hubieramos puesto display inline*/
+ 		/*la diferencia son las propiedades que les podemos agregar*/
+ 	flex-wrap: wrap;/*le decimos que si no hay suficiente espacio se arme una linea abajo
+ 	        tambien...es lo que seria responsive
+ 	        con esto ocupa siempre el ancho de la pantalla
+ 	        genera una segunda linea de botones abajo o tercera*/
+ 	justify-content:space-between;/*distribuye para adentro , no alrededor , pero sigue habiendo espacio entre botones*/
+ 	/*el justifi content alinea por defecto con Flex-start , o sea , los alinea de izquiera a derecha*/
+ 	/*si hubiera puesto un float a la derecha los botones quedan a reves...inicio queda contra la derecha*/
+    /* flex-end;/*tira los botones a la derecha sin modificar orden*/ 	
+ 	/*center;/*Lo centra pero deja espacio sobrante*/
+ 	/*space-around;/*agrega un espacio para afuera pero deja margenes*/	
+ }					
+
+/*Como hago para que no me quede espacio entre botones?*/
+ .menu-simple li{
+ 	flex:1 0 auto;/*si hay espacio disponible crece en 1 , si no , se queda en cero  , y si es menor es auto*/
+ 	text-align: center;/*alineo las palabras de los botones*/
+
+ }
+
+ #map{
+	width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 5px #888;
+ }

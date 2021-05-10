@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homicidios</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1" >
+
+	<!--Mis hojas de estilo-->
+	<link rel="stylesheet" href="CSS\styles.css">
+	<link rel="stylesheet" href="CSS\inicio.css">
+
+	<!-- Script y CSS Leaflet-->
+	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+
+	<!-- Archivos GeoJson (capas)-->
+	<script type="text/javascript" src="GeoJson/hom.js"></script>
+	<script type="text/javascript" src="GeoJson/compoly.js"></script>
+	<script type="text/javascript" src="GeoJson/comline.js"></script>
+	
+	<!-- Panel de Control -->
+	<script src="JS/leaflet-panel-layers.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/leaflet-panel-layers.css">
+
+	<!--Plugin OSMGeocode -->
+    <!--si descargamos 3.3 -->
+    <!--<script src="js/Control.OSMGeocoder.js"></script>-->
+   	<!--<link rel="stylesheet" href="js/Control.OSMGeocoder.css" />-->
+	<!--si añadimos directamente 3.1-->
+	<script src="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.css" />
+
+	<!-- Script Fontawesome-->
+	<script src="https://kit.fontawesome.com/2ea946c04a.js" crossorigin="anonymous"></script>
+
+	<!-- GOOGLE FONTs -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+	<!--Script Mapa de Calor-->
+	<script src="JS/HeatLayer.js"></script>
+	<script src="JS/leaflet-heat.js"></script>
+
+	<!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="CSS/animate.min.css">
+	
+</head>
+
+<body>
+	<div class="conteiner-flex">
+		<section>
+			
+			<nav class="menu-simple menu">
+				<ul>
+					<li><a class ="inicio"href="index.html">Inicio</a></li>
+					<li><a href="#">Nosotros</a></li>
+					<li><a href="#">Clases</a></li>
+					<li><a href="documentos.html">Documentos</a></li>
+					<li><a href="mapas.html">Mapas</a></li>
+					<li><a href="recursos.html">Recursos</a></li>
+					<li><a href="Contacto.html">Contacto</a></li>
+				</ul>
+			</nav>
+		
+			<h1 class="logo">Homicidios en <span>San Miguel de Tucumán</span></h1>
+	
+		</section>
+	</div>
+
+	<main>
+		<section>
+			<div id="map" class="map animated bounceInUp"></div>
+			<script src="JS/map.js"></script>		
+		</section>
+	</main>
+
+	<footer>
+		<div class="menu-simple menu">
+			<h3>footer</h3>
+		</div>
+	</footer>
+	
+</body>
+</html>
