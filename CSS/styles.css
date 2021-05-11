@@ -207,18 +207,11 @@ ul {
 
 
 
-.titulo1{
-	margin: 0 0 1em;
-	padding: 1em 0;
-	font-size: 65%;
-	font-weight: 300;
-	text-align: center;
-	color: white;
-}
+
 
 .tarjeta{
 	background: black;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 	width: 33%;/****1******agrego un valor porcentual ,para que las cajas se acomoden en 
 	3 columnas...Como ninguna tiene alto , el alto se determina automaticamente 
 	de acuerdo a su contenido*/
@@ -249,21 +242,21 @@ ul {
     
 }
 
+.tarjeta h4{
+	margin-top: .3em;
+	margin-bottom: .3em;
+    text-align: center;
+}
+
 .tarjeta a:hover{
 	box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
-    background: hsl(0, 0%, 25%);
+    background: hsl(0, 0%, 15%);
     color: red;
 }
 
-.tarjeta-content{  
-	padding: 1.4em;
-	
-}
-
 .tarjeta-content a{
-	margin-top: 0;
-	margin-bottom: .5em;
-	/*font-weight: normal;*/
+	margin-top: .3em;
+	margin-bottom: .3em;
 }
 
 .tarjeta-content p{
@@ -281,3 +274,23 @@ img{
 	height: auto;
 }
 
+iframe{
+	display: block;
+	margin: 0;
+	border:0;
+	width: 100%;
+	height: 640px;
+}
+
+.tarjeta-pdf{
+	background: black;
+	margin-bottom: 1em;
+	width: 100%;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.tarjeta-pdf h4{
+	text-align: center;
+	margin-top: .3em;
+	margin-bottom: .3em;
+}
