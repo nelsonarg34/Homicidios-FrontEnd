@@ -11,8 +11,9 @@ body {
     color: #fff;
     line-height: 1.6;
     font-family: 'Quicksand', sans-serif;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin:0;
+    
 }
 
 ul {
@@ -22,7 +23,7 @@ ul {
 
 .logo {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 0;
     margin: 1rem;
 }
@@ -99,6 +100,7 @@ ul {
 /* LARGE SIZE */
 @media(min-width: 700px) {
     body {
+        
         padding: 0 4em;
     }
     .contact-wrapper {
