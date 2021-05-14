@@ -9,8 +9,8 @@
 	margin: 0;
 }
 .leaflet-panel-layers {
-	width: 30px;
-	min-width: 30px;
+	width: 20px;
+	min-width: 20px;
 }
 .leaflet-panel-layers.expanded {
 	width: auto;
@@ -140,7 +140,7 @@
 }
 .leaflet-panel-layers-group.collapsible .leaflet-panel-layers-icon:first-child {
 	min-width: 20px;
-	font-size: 16px;
+	font-size: 10px;
 	text-align: center;
 	background: none;
 }
