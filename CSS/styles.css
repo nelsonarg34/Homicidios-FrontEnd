@@ -102,7 +102,7 @@ ul {
 @media(min-width: 700px) {
     body {
         
-        padding: 0 4em;
+        padding: 0em 4em;
     }
     .contact-wrapper {
         display: grid;
@@ -171,21 +171,22 @@ ul {
  }
 
  .legend {
+    font-size: 1rem;
     display: flexbox;
-	padding: 1rem;
+	padding: 0.3rem;
 	background-color: rgb(233, 229, 229);
-	line-height: 18px;
+	line-height: 15px;
     color: black;
 	opacity: 1;
 	fill-opacity: 1;
 }
 .legend i {
-    
+   
 	border-radius: 25px;
-	width: 15px;
-    height: 15px;
+	width: 11px;
+    height: 11px;
     float: left;
-    margin-right: 8px;
+    margin-right: 4px;
     opacity: 1;
 	color: white;
 	fill-opacity: 1.0;
@@ -300,7 +301,3 @@ figure{
     }
 }
 
-.fieldset, label {
-	margin: 0 10px;
-	max-width: 600px;
-}
