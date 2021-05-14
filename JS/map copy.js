@@ -31,9 +31,6 @@ L.control.scale().addTo(map);
         name: "OpenStreetMap_HOT",
         layer: L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png')
     }
-    
-
-
 ];
     
 var overLayers = [
@@ -122,7 +119,7 @@ var overLayers = [
 ];
 
 /*--Control de Capas--*/
-map.addControl( new L.Control.PanelLayers(baseLayers, overLayers,{position:"topleft",compact:true,collapsibleGroups: true}) );
+map.addControl( new L.Control.PanelLayers(baseLayers, overLayers,{position:"topleft",compact:"true"}) );
 
 
 function popUpInfo(feature, layer) {
@@ -180,4 +177,13 @@ var legend = L.control({position: 'bottomleft'});
 
 
 
+
+
+
+
+
+   
     
+    
+
+

@@ -1,3 +1,16 @@
 .recursos {
 	background: hsl(0, 0%, 3%);
 }
+
+.card{
+	background: black;
+	
+}
+.card-title{
+	font-size: 2rem;
+}
+
+.card-text, .btn{
+	font-size: 1.5rem;
+}
+

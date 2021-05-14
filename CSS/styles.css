@@ -63,7 +63,7 @@ ul {
 .contact-form form input,
 .contact-form form textarea {
     width: 100%;
-    padding: .7em;
+    padding: .4em;
     border: none;
     background: none;
     outline: 0;
@@ -75,7 +75,7 @@ ul {
     background: #B70E21;
     border: 0;
     text-transform: uppercase;
-    padding: 1em;
+    
 }
 
 .contact-form form button:hover,
@@ -232,7 +232,7 @@ figure{
 	margin: 0;
 }
 
-img{
+.thumbnail{
 	display: block;
 	border:0;
 	width: 100%;
@@ -295,4 +295,9 @@ figure{
     .docuflex-container{
         flex-direction: column;
     }
+}
+
+.fieldset, label {
+	margin: 0 10px;
+	max-width: 600px;
 }

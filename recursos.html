@@ -18,10 +18,6 @@
     <!-- ANIMATE CSS -->
     <link rel="stylesheet" href="CSS/animate.min.css">
 
-	
-
-	
-
 </head>
 
 <body>
@@ -47,38 +43,65 @@
     <h1 class="logo">Recursos <span>GIS</span></h1>
 
     <main>
-        <section class="archivos animated bounceInUp">
-			
-            <article  class="archivos-item">
-                <h4>Homicidios dolosos (2014)</h4>
-                <div  class="archivos-content">
-                    <figure class="thumbnail">
-                        <img src="img/homicidios_2014.png" alt="imagen1">
-                    </figure>
-                    
-                        <p>sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                            sssssssssssssssssssssssssssssssssssssssssssssssss
-                        </p>
-                        <a href="img/Homicidios_2014.png" target="_blank">Descargar png</a>
-                        
-                    
+        <div class="card text-white mb-3" style="max-width: 60%;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img class = "card-img-top" src="img/callejero_smtuc.png"  alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h2 class="card-title">Callejero</h2>
+                  <p class="card-text">Callejero en formato shapefile de la ciudad de San Miguel de Tucumán.</p>
+                  <a href="Shp/Callejero.zip" class="btn btn-primary stretched-link">Descargar SHP</a>
                 </div>
-            </article>
+              </div>
+            </div>
+          </div>
 
-            <article class="archivos-item">
-                <h4>Homicidios dolosos (2014)</h4>
-                <figure class="thumbnail">
-                    <img src="img/homicidios_2014.png" alt="imagen1">
-                </figure>
-                <div class="archivos-content">
-                    <a href="img/Homicidios_2014.png" target="_blank">Descargar png</a>
-                    <p></p>
+          <div class="card text-white mb-3" style="max-width: 60%;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img class = "card-img-top" src="img/homicidios_smtuc.png"  alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h2 class="card-title">Homicidios Dolosos</h2>
+                  <p class="card-text">Homicidios en formato shapefile de la ciudad de San Miguel de Tucumán. 
+                      Años: 2014-2020.
+                  </p>
+                  <a href="Shp/homicidios.zip" class="btn btn-primary stretched-link">Descargar SHP</a>
                 </div>
-            </article>
+              </div>
+            </div>
+          </div>
 
-
-        </section>
+          <div class="card text-white mb-3" style="max-width: 60%;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img class = "card-img-top" src="img/limcom_smtuc.png"  alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h2 class="card-title">Límites Comisarías</h2>
+                  <p class="card-text">Límites jurisdiccionales de las 14 comisarias en formato GeoJson de la ciudad de San Miguel de Tucumán.</p>
+                  <a href="GeoJson/comline.js" class="btn btn-primary stretched-link">Descargar GeoJson</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </main>
+    <footer>
+		<div class="footer">
+			<ul>
+				<li><h4>Autor: Nelson Daniel Argañaraz</h4></li>
+				<li><a href="mailto:nelson8111@gmail.com">nelson8111@gmail.com</a></li>
+			</ul>
+		</div>
+	</footer>
 
     
 </body>
