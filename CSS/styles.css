@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
     font-family: 'Quicksand', sans-serif;
     font-size: 2rem;
-    padding: 0 1.5em;
+    margin:0;
 }
 
 ul {
@@ -32,9 +32,6 @@ ul {
 }
 
 /*FORMULARIO DE CONTACTO*/
-.contact-wrapper {
-    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
-}
 
 .contact-wrapper > * {
     padding: 1em;
@@ -121,14 +118,13 @@ ul {
     }
 }
 
-/*MENU PRINCIPAL*/
+/******MENU PRINCIPAL******/
 .menu ul{
 	list-style-type: none; 
 	padding: 0;
 	margin:0;
 	background: hsl(0, 0%, 15%);
 }
-
 
 .menu li a {
 	display: block;
@@ -142,21 +138,10 @@ ul {
     color: red;
 }
 
- /*De aca para abajo Flexbox parte dos de la clase*/
- .menu-simple ul{
- 	display: flex;  /*este display nos premite trabajar con cajas flexibles*/
- 			/*vemos como se ve igual que si hubieramos puesto display inline*/
- 		/*la diferencia son las propiedades que les podemos agregar*/
- 	flex-wrap: wrap;/*le decimos que si no hay suficiente espacio se arme una linea abajo
- 	        tambien...es lo que seria responsive
- 	        con esto ocupa siempre el ancho de la pantalla
- 	        genera una segunda linea de botones abajo o tercera*/
- 	justify-content:space-between;/*distribuye para adentro , no alrededor , pero sigue habiendo espacio entre botones*/
- 	/*el justifi content alinea por defecto con Flex-start , o sea , los alinea de izquiera a derecha*/
- 	/*si hubiera puesto un float a la derecha los botones quedan a reves...inicio queda contra la derecha*/
-    /* flex-end;/*tira los botones a la derecha sin modificar orden*/ 	
- 	/*center;/*Lo centra pero deja espacio sobrante*/
- 	/*space-around;/*agrega un espacio para afuera pero deja margenes*/	
+.menu-simple ul{
+ 	display: flex;  
+ 	flex-wrap: wrap;
+ 	justify-content:space-between;
  }					
 
 /*Como hago para que no me quede espacio entre botones?*/
@@ -176,9 +161,7 @@ ul {
     height: 680px;
     color:#000;
     border: #000 solid 2px;
-    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
-
- }
+}
 
  #map > * {
     padding: 1em;
@@ -205,41 +188,23 @@ ul {
 	fill-opacity: 1.0;
 }
 
-
-
-
+/******MAPAS*****/
 
 .tarjeta{
 	background: black;
 	margin-bottom: 1em;
-	width: 33%;/****1******agrego un valor porcentual ,para que las cajas se acomoden en 
-	3 columnas...Como ninguna tiene alto , el alto se determina automaticamente 
-	de acuerdo a su contenido*/
-	/*float: left;/*No Usar!!!!este podria ser una manera de arreglarlo , pero queda mal
-	No usar esto porque queda distinto el contenido de las cajas*/
-	/*podria arreglarlo con un alto fijo .. pero puede que no sea suficiente a veces*/
-	/*algunos usan javascript ... pero es mas codigo y usa posiciones absolutas , cosa
-	que molestaria mucho al responsive*/
-    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+	width: 33%;
 }
 
-
-/****2****Agrego esta clase para usar FLEXBOX!!!!*/
 .cards{
-	display: flex;/*acomoda todo horizontal pero modifica los anchos automaticamente
-	para que todos entren en la pantalla--PERO AJUSTO EL ALTO!!*/
-	flex-wrap: wrap;/*ajusta los tamanios al ancho que le habiamos indicado 33%*/
-	justify-content: space-between;/*para que el 1% que me sobra (use 33%) se distribuya
-	hacia adentro----con space-arraund nos tiraria 0.5 al margen izquierdo y 0.5
-	al margen derecho*/
-	/*si quiero un espacio mas grande entre tarjetas , achico el 33% , y como 
-	sobra un poco mas tiene mas espacio de separacion*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .tarjeta a{
 	color: white;
 	text-decoration: none;
-    
 }
 
 .tarjeta h4{
@@ -249,14 +214,14 @@ ul {
 }
 
 .tarjeta a:hover{
-	box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
-    background: hsl(0, 0%, 15%);
+	background: hsl(0, 0%, 15%);
     color: red;
 }
 
 .tarjeta-content a{
 	margin-top: .3em;
 	margin-bottom: .3em;
+    transition: 0.8s;
 }
 
 .tarjeta-content p{
@@ -274,23 +239,60 @@ img{
 	height: auto;
 }
 
-iframe{
-	display: block;
+figure{
 	margin: 0;
-	border:0;
-	width: 100%;
-	height: 640px;
 }
 
-.tarjeta-pdf{
-	background: black;
-	margin-bottom: 1em;
-	width: 100%;
-    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+.footer{
+    display: block;
+    background: hsl(0, 0%, 15%);
+    padding: 0;
 }
 
-.tarjeta-pdf h4{
-	text-align: center;
-	margin-top: .3em;
+.footer h4{
+    margin-top: .3em;
 	margin-bottom: .3em;
+}
+
+.footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/******DOCUMENTOS******/
+.docuflex-container{
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: space-between;
+    background: black;
+    width: 100%;
+}
+
+.docuflex-container .descripcion{
+    width: 65%;
+}
+
+.docuflex-container .imagen{
+    width: 30%;
+}
+
+.docuflex-container .descripcion{
+    font-size: 85%;
+}
+
+.docuflex-container a{
+    color: white;
+	text-decoration: none;
+    transition: 0.8s;
+}
+
+.docuflex-container a:hover{
+    background: hsl(0, 0%, 25%);
+    color: red;
+}
+
+@media (max-width: 800px) {
+    .docuflex-container{
+        flex-direction: column;
+    }
 }
