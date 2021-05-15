@@ -304,6 +304,7 @@ figure{
     }
     .leaflet-panel-layers{
         font-size: 0.8rem;
+       
     }
     .legend {
         font-size: 0.8rem;
@@ -312,6 +313,10 @@ figure{
         
         height: 460px;
         
+    }
+    .logo {
+        font-size: 1.5rem;
+        margin: 0.6rem;
     }
 }
 
