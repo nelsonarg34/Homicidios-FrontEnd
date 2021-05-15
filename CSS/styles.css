@@ -304,13 +304,14 @@ figure{
     }
     .leaflet-panel-layers{
         font-size: 0.8rem;
+        margin: 0;
+        padding: 0;
        
     }
     .legend {
         font-size: 0.8rem;
     }
     #map{
-        
         height: 460px;
         
     }

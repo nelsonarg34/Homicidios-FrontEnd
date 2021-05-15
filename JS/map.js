@@ -1,4 +1,4 @@
-var map = L.map('map').setView([-26.8198, -65.2169], 13);
+var map = L.map('map',{ zoomControl: false }).setView([-26.8198, -65.2169], 13);
  
 osmLayer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
@@ -15,8 +15,7 @@ geoJson2heat = function(geojson) {
 var geoData = geoJson2heat(hom, 1); 
 heatMap = new L.heatLayer(geoData,{radius: 35, blur: 30, gradient: {0.4: 'blue', 0.65: 'yellow', 0.75: 'red'},maxZoom: 17});
             
-
-L.control.scale().addTo(map);
+new L.Control.Zoom({ position: 'topright' }).addTo(map);
 
  var baseLayers = [
     {
