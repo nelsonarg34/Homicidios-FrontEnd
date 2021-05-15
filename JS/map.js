@@ -158,7 +158,7 @@ function estilo_movil (feature) {
     };
 };
 
-var legend = L.control({position: 'bottomleft'});
+var legend = L.control({position: 'bottomright'});
     legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend');

@@ -99,7 +99,7 @@ ul {
 }
 
 /* LARGE SIZE */
-@media(min-width: 700px) {
+@media(min-width: 600px) {
     body {
         
         padding: 0em 4em;
@@ -119,6 +119,7 @@ ul {
     .conteiner-flex{
         min-width: 700px;
     }
+    
 }
 
 /******MENU PRINCIPAL******/
@@ -173,7 +174,7 @@ ul {
  .legend {
     font-size: 1rem;
     display: flexbox;
-	padding: 0.3rem;
+   	padding: 0.3rem;
 	background-color: rgb(233, 229, 229);
 	line-height: 15px;
     color: black;
@@ -181,8 +182,7 @@ ul {
 	fill-opacity: 1;
 }
 .legend i {
-   
-	border-radius: 25px;
+   	border-radius: 25px;
 	width: 11px;
     height: 11px;
     float: left;
@@ -299,5 +299,12 @@ figure{
     .docuflex-container{
         flex-direction: column;
     }
+    .leaflet-panel-layers{
+        font-size: 0.9rem;
+    }
+    .legend {
+        font-size: 0.9rem;
+    }
 }
+
 
