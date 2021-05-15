@@ -116,9 +116,7 @@ ul {
     .contact-info p {
         text-align: left;
     }
-    .conteiner-flex{
-        min-width: 700px;
-    }
+    
     
 }
 
@@ -295,9 +293,10 @@ figure{
     color: red;
 }
 
-@media (max-width: 800px) {
+/******RESPONSIVE PARA MOVIL******/
+@media (max-width: 700px) {
     body{
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
     .docuflex-container{
         flex-direction: column;
@@ -313,11 +312,13 @@ figure{
     }
     #map{
         height: 460px;
-        
     }
     .logo {
         font-size: 1.5rem;
         margin: 0.6rem;
+    }
+    .conteiner-flex{
+        max-width: 700px;
     }
 }
 
