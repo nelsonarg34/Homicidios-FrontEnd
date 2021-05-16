@@ -22,14 +22,14 @@ new L.Control.Zoom({ position: 'topright' }).addTo(map);
         name: "OpenStreetMap",
         layer: osmLayer
     },
-    {
+    /*{
         name: "OpenStreetMap_DE",
         layer: L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png')
     },
     {
         name: "OpenStreetMap_HOT",
         layer: L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png')
-    }
+    }*/
     
 
 
@@ -38,7 +38,7 @@ new L.Control.Zoom({ position: 'topright' }).addTo(map);
 var overLayers = [
     {
         group: "Años",
-		collapsed: true,
+		collapsed: false,
 		layers: [{
         name: "2014",
         active: "true",
@@ -113,8 +113,18 @@ var overLayers = [
     },
     {
         name: "Limites comisarias",
+        active: true,    
+        layer: L.geoJson(comline, {
+            style: styleLine
+          })
+    },
+    {
+        name: "Barrios",
             
-        layer: L.geoJson(comline)
+        layer: L.geoJson(barrios, {
+            onEachFeature: popUpInfo,
+            style: stylePolygon
+          })
     }
     
         
@@ -130,8 +140,23 @@ function popUpInfo(feature, layer) {
         //layer.bindPopup("<b>"+feature.properties.nomb_mus+"</b><br>"+feature.properties.municipio+" ("+feature.properties.provincia+")");
         layer.bindPopup("<b>"+feature.properties.MOVIL2);
     }
+    if (feature.properties && feature.properties.NOMBRE) {
+        //layer.bindPopup("<b>"+feature.properties.nomb_mus+"</b><br>"+feature.properties.municipio+" ("+feature.properties.provincia+")");
+        layer.bindPopup("<b>"+feature.properties.NOMBRE);
+    }
 }
 
+//ESTILO DE LINEA
+function styleLine(feature) {
+    return {
+      weight: 1.6,
+      color: 'red',
+      opacity: 1.0,
+      //dashArray: '5, 5, 1, 5'
+    };
+  };
+  
+//ESTILO DE PUNTO
 function estiloCircleMarker(feature, latlng) {
     return L.circleMarker(latlng, {
         radius: 5.0,
@@ -143,6 +168,19 @@ function estiloCircleMarker(feature, latlng) {
     })
 }
 
+//ESTILO DE POLIGONO
+function stylePolygon(feature) {
+    return {
+      weight: 1.1, // grosor de línea
+      //color: 'blue', // color de línea
+      opacity: 0.8, // tansparencia de línea
+      //fillColor: 'blue', // color de relleno
+      fillOpacity: 0.3, // transparencia de relleno
+      
+    };
+  };
+
+  
 function colorPuntos(d) { 
     return d == "Otros" ? '#FFF44F' : 
     d == "Discusión – Riña – Venganza" ? '#EF7F1A' : 
