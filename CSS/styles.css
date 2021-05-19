@@ -7,6 +7,7 @@ html{
 }
 
 body {
+    padding: 0em 2em;
     background: #181818;
     color: #fff;
     line-height: 1.6;
@@ -15,6 +16,9 @@ body {
     margin:0;
     height: 100%;
     
+}
+main{
+    flex: 1 0 auto;
 }
 
 ul {
@@ -88,22 +92,9 @@ ul {
     outline: 0;
 }
 
-/* INFO DE CONTACTO */
-.contact-info {
-    background: #000;
-}
-
-.contact-info h4, .contact-info ul, .contact-info p {
-    text-align: center;
-    margin: 0 0 1rem 0;
-}
-
-/* LARGE SIZE */
-@media(min-width: 600px) {
-    body {
-        
-        padding: 0em 4em;
-    }
+/* RESPONSIVE CONTACTO */
+@media(min-width: 700px) {
+    
     .contact-wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -116,8 +107,18 @@ ul {
     .contact-info p {
         text-align: left;
     }
-    
-    
+   
+}
+
+
+/* INFO DE CONTACTO */
+.contact-info {
+    background: #000;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
 }
 
 /******MENU PRINCIPAL******/
@@ -246,7 +247,7 @@ figure{
 }
 
 .footer{
-    display: block;
+    flex: 0 0 auto;
     background: hsl(0, 0%, 15%);
     padding: 0;
 }
@@ -296,6 +297,7 @@ figure{
 /******RESPONSIVE PARA MOVIL******/
 @media (max-width: 700px) {
     body{
+        padding: 0em 1em;
         font-size: 1.3rem;
     }
     .docuflex-container{
@@ -321,5 +323,4 @@ figure{
         max-width: 700px;
     }
 }
-
 
