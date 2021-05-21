@@ -108,10 +108,7 @@ var myChart = new Chart(ctx, {
       legend: {
         position: 'top',
       },
-      title: {
-        display: true,
-        text: 'Crimenes por año'
-      }
+      
     }
         
           
@@ -158,10 +155,7 @@ var myChart1 = new Chart(ctx, {
       legend: {
         position: 'top',
       },
-      title: {
-        display: true,
-        text: 'Móvil del crimen'
-      }
+      
     }
         
           
