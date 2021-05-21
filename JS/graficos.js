@@ -1,12 +1,13 @@
-//******Crimenes por año******
-let a2014=0;
-let a2015=0;
-let a2016=0;
-let a2017=0;
-let a2018=0;
-let a2019=0;
-let a2020=0;
-geoJ = function(geojson) {
+//******Obntención de datos: Crimenes por año******
+
+anios = function(geojson) {
+    let a2014=0;
+    let a2015=0;
+    let a2016=0;
+    let a2017=0;
+    let a2018=0;
+    let a2019=0;
+    let a2020=0;
     
     geojson.features.map(function(feature) {
     //return feature.properties.ANIO_NUM;
@@ -33,22 +34,21 @@ geoJ = function(geojson) {
         }
     }
     );
-    
+    return [a2014,a2015,a2016,a2017,a2018,a2019,a2020]
 }
     
-geoJ(hom);
 
-//******Móvil de Crimen******
-//'Ocasión De Robo','Discusión – Riña – Venganza','Violencia Domestica','Otros'
-let ocarob=0;
-let disc=0;
-let viodom=0;
-let otros=0;
 
-geoJ1 = function(geojson) {
+//******Obntención de datos: Móvil de Crimen******
+
+movil = function(geojson) {
+    let ocarob=0;
+    let disc=0;
+    let viodom=0;
+    let otros=0;
     
     geojson.features.map(function(feature) {
-    //return feature.properties.MOVIL;
+    
     if (feature.properties.MOVIL2 == 'Ocasión De Robo'){
         ocarob++;
         }
@@ -63,11 +63,11 @@ geoJ1 = function(geojson) {
         }
     }
     );
-    
+   return [ocarob, disc, viodom, otros]
 }
     
-geoJ1(hom);
 
+/******Gráfica por años******/
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -75,7 +75,7 @@ var myChart = new Chart(ctx, {
         labels: ['2014', '2015', '2016', '2017', '2018', '2019', '2020'],
         datasets: [{
             label: 'Total',
-            data: [a2014, a2015, a2016, a2017, a2018, a2019, a2020],
+            data: anios(hom),
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -115,7 +115,7 @@ var myChart = new Chart(ctx, {
     }
 });
 
-
+/******Gráfica por móvil******/
 var ctx = document.getElementById('myChart1').getContext('2d');
 var myChart1 = new Chart(ctx, {
     type: 'bar',
@@ -123,7 +123,7 @@ var myChart1 = new Chart(ctx, {
         labels: ['Ocasión De Robo','Discusión – Riña – Venganza','Violencia Domestica','Otros'],
         datasets: [{
             label: 'Total',
-            data: [ocarob, disc, viodom, otros],
+            data: movil(hom),
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
