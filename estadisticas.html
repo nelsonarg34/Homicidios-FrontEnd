@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homicidios</title>
+	<meta charset="utf-8">
+	<!--<meta name="viewport" content="width=device-width , initial-scale=1" >-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximumscale=1.0, user-scalable=no" />
+
+	<!--Mis hojas de estilo-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="CSS\styles.css">
+	<link rel="stylesheet" href="CSS\estadisticas.css">
+
+	
+
+	<!-- Archivos GeoJson (capas)-->
+	<script type="text/javascript" src="GeoJson/hom.js"></script>
+		
+	<!-- Script Fontawesome-->
+	<script src="https://kit.fontawesome.com/2ea946c04a.js" crossorigin="anonymous"></script>
+
+	<!-- GOOGLE FONTs -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+	<!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="CSS/animate.min.css">
+
+	<script src="JS/jquery-2.1.1.min.js"></script>
+
+	<!-- CHARTS (PARA GRAFICAS ESTADISTICAS) -->
+	<script src="JS/chart.js"></script>
+	
+</head>
+
+<body>
+	
+	<div class="conteiner-flex">
+		
+		<section>
+			
+			<nav class="menu-simple menu">
+				<ul>
+					<li><a class ="inicio"href="index.html">Inicio</a></li>
+					<!--<li><a href="#">Nosotros</a></li>-->
+					<li><a class ="estadisticas" href="estadisticas.html">Estadísticas</a></li>
+					<li><a href="documentos.html">Documentos</a></li>
+					<li><a href="mapas.html">Mapas</a></li>
+					<li><a href="recursos.html">Recursos</a></li>
+					<li><a href="Contacto.html">Contacto</a></li>
+				</ul>
+			</nav>
+		
+			<h1 class="logo">Gráficos <span>estadísticos</span></h1>
+	
+		</section>
+	</div>
+	
+	<main>
+		<div class="cards">
+			<canvas class="tarjeta-stats" id="myChart"></canvas>
+			<canvas class="tarjeta-stats" id="myChart1"></canvas>
+
+		</div>
+		
+		<script src="JS/graficos.js"></script>
+	</main>
+
+	<footer>
+		<div class="footer">
+			<ul>
+				<li><h4>Autor: Nelson Daniel Argañaraz</h4></li>
+				<li><a href="mailto:nelson8111@gmail.com">nelson8111@gmail.com</a></li>
+			</ul>
+		</div>
+	</footer>
+	
+</body>
+</html>

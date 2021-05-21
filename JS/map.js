@@ -11,8 +11,13 @@ geoJson2heat = function(geojson) {
     return geojson.features.map(function(feature) {
     return [parseFloat(feature.geometry.coordinates[1]), parseFloat(feature.geometry.coordinates[0])];
     });
-}   
-var geoData = geoJson2heat(hom, 1); 
+}
+
+
+
+var geoData = geoJson2heat(hom, 1);
+
+
 heatMap = new L.heatLayer(geoData,{radius: 35, blur: 30, gradient: {0.4: 'blue', 0.65: 'yellow', 0.75: 'red'},maxZoom: 17});
             
 new L.Control.Zoom({ position: 'topright' }).addTo(map);
@@ -145,6 +150,28 @@ function popUpInfo(feature, layer) {
         layer.bindPopup("<b>"+feature.properties.NOMBRE);
     }
 }
+
+
+
+let a2014=0;
+geoJ = function(geojson) {
+    
+    geojson.features.map(function(feature) {
+    //return feature.properties.ANIO_NUM;
+    if (feature.properties.ANIO_NUM == 2014){
+    a2014=a2014+1;
+    }}
+    );
+    //return a2014;
+}
+    
+geoJ(hom);
+
+
+console.log(a2014);
+
+
+
 
 //ESTILO DE LINEA
 function styleLine(feature) {
