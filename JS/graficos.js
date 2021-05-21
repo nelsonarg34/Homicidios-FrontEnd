@@ -38,6 +38,36 @@ geoJ = function(geojson) {
     
 geoJ(hom);
 
+//******Móvil de Crimen******
+//'Ocasión De Robo','Discusión – Riña – Venganza','Violencia Domestica','Otros'
+let ocarob=0;
+let disc=0;
+let viodom=0;
+let otros=0;
+
+geoJ1 = function(geojson) {
+    
+    geojson.features.map(function(feature) {
+    //return feature.properties.MOVIL;
+    if (feature.properties.MOVIL2 == 'Ocasión De Robo'){
+        ocarob++;
+        }
+    if (feature.properties.MOVIL2 == 'Discusión – Riña – Venganza'){
+        disc++;
+        }
+    if (feature.properties.MOVIL2 == 'Violencia Domestica'){
+        viodom++;
+        }
+    if (feature.properties.MOVIL2 == 'Otros'){
+        otros++;
+        }
+    }
+    );
+    
+}
+    
+geoJ1(hom);
+
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -73,6 +103,7 @@ var myChart = new Chart(ctx, {
             }
         },
         responsive: true,
+        maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'top',
@@ -87,37 +118,9 @@ var myChart = new Chart(ctx, {
     }
 });
 
-//******Móvil de Crimen******
-//'Ocasión De Robo','Discusión – Riña – Venganza','Violencia Domestica','Otros'
-let ocarob=0;
-let disc=0;
-let viodom=0;
-let otros=0;
 
-geoJ1 = function(geojson) {
-    
-    geojson.features.map(function(feature) {
-    //return feature.properties.MOVIL;
-    if (feature.properties.MOVIL2 == 'Ocasión De Robo'){
-        ocarob++;
-        }
-    if (feature.properties.MOVIL2 == 'Discusión – Riña – Venganza'){
-        disc++;
-        }
-    if (feature.properties.MOVIL2 == 'Violencia Domestica'){
-        viodom++;
-        }
-    if (feature.properties.MOVIL2 == 'Otros'){
-        otros++;
-        }
-    }
-    );
-    
-}
-    
-geoJ1(hom);
 var ctx = document.getElementById('myChart1').getContext('2d');
-var myChart = new Chart(ctx, {
+var myChart1 = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Ocasión De Robo','Discusión – Riña – Venganza','Violencia Domestica','Otros'],
@@ -150,6 +153,7 @@ var myChart = new Chart(ctx, {
             }
         },
         responsive: true,
+        maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'top',
