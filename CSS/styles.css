@@ -159,15 +159,12 @@ ul {
  /*MAPA (LEAFLET)*/
  #map{
 	width: 100%;
-    height: 480px;
+    height: 580px;
     color:#000;
     border: #000 solid 2px;
 }
 
- #map > * {
-    padding: 1em;
- }
-
+ 
  .legend {
     font-size: 1rem;
     display: flexbox;
@@ -239,7 +236,6 @@ ul {
 }
 
 
-
 /******FOOTER******/
 
 .footer{
@@ -291,8 +287,6 @@ ul {
     color: red;
 }
 
-
-
 /* Estadisticas------ lo que mas me costo hacer*/
 figure {
     background-color: rgba(255,255,255,.05);
@@ -304,7 +298,7 @@ figure p {
     font-size: .8em;
     }
     
-canvas {
+.estat {
     width: 100%;
     }
 
@@ -337,6 +331,9 @@ canvas {
 }
 
 
+
+
+
 /******RESPONSIVE PARA MOVIL******/
 @media (max-width: 700px) {
     body{
@@ -355,9 +352,9 @@ canvas {
     .legend {
         font-size: 0.8rem;
     }
-    #map{
+    /*#map{
         height: 460px;
-    }
+    }*/
     .logo {
         font-size: 1.5rem;
         margin: 0.6rem;

@@ -3,8 +3,8 @@
 <head>
 	<title>Homicidios</title>
 	<meta charset="utf-8">
-	<!--<meta name="viewport" content="width=device-width , initial-scale=1" >-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximumscale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width , initial-scale=1" >
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<!--Mis hojas de estilo-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -12,8 +12,8 @@
 	<link rel="stylesheet" href="CSS\inicio.css">
 
 	<!-- Script y CSS Leaflet-->
-	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
 	<!-- Archivos GeoJson (capas)-->
 	<script type="text/javascript" src="GeoJson/hom.js"></script>
@@ -47,16 +47,11 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
 	<!--Script Mapa de Calor-->
-	<script src="JS/HeatLayer.js"></script>
-	<script src="JS/leaflet-heat.js"></script>
+
+	<script src="dist/leaflet-heat.js"></script>
 
 	<!-- ANIMATE CSS -->
     <link rel="stylesheet" href="CSS/animate.min.css">
-
-	<link rel="stylesheet" href="CSS/L.Control.HtmlLegend.css" />
-	<script src="JS/L.Control.HtmlLegend.js"></script>
-	<script src="JS/jquery-2.1.1.min.js"></script>
-
 	
 </head>
 
@@ -85,10 +80,9 @@
 	
 	<main>
 		
-		<section>
 			<div id="map" class="map animated bounceInUp"></div>
 			<script src="JS/map.js"></script>		
-		</section>
+			
 	</main>
 
 	<footer>
